@@ -26,6 +26,9 @@ for result in results:
 
 time.sleep(1)
 
+driver.find_element(By.CSS_SELECTOR, "img[alt='Cart']").click()
+time.sleep(1)
+driver.find_element(By.CSS_SELECTOR, "div[class='cart-preview active'] button").click()
 
 
 # driver.close()
