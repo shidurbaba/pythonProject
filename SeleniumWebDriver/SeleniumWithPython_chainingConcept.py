@@ -16,7 +16,7 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 # WebElements in CSS
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(3)
-
+actual_list = []
 product_names = driver.find_elements(By.CSS_SELECTOR,".products:nth-child(1) .product-name")
 print(len(product_names))
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
@@ -27,7 +27,8 @@ print(counts)
 assert counts > 0
 
 for result in results:
+    actual_list.append(result.find_element(By.XPATH,"h4").text)
     result.find_element(By.XPATH, "div/button").click()
 
-
+print(actual_list)
 driver.close()
