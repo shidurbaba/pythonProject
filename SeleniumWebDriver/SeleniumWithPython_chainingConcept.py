@@ -17,6 +17,7 @@ driver.get("https://rahulshettyacademy.com/seleniumPractise/#/")
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(3)
 actual_list = []
+#Chaining code using selenium xpath
 product_names = driver.find_elements(By.CSS_SELECTOR,".products:nth-child(1) .product-name")
 print(len(product_names))
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
