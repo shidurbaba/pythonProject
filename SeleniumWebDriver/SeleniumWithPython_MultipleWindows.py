@@ -19,6 +19,7 @@ time.sleep(3)
 driver.find_element(By.LINK_TEXT, "Click Here").click()
 
 windowOpened = driver.window_handles
+#Switch to Child Window
 driver.switch_to.window(windowOpened[1])
 
 new_window = driver.find_element(By.TAG_NAME, "h3").text
@@ -27,6 +28,7 @@ assert "New Window" == new_window
 time.sleep(2)
 driver.close()
 
+#Switch to Parent Window
 driver.switch_to.window(windowOpened[0])
 parent_window_text = driver.find_element(By.TAG_NAME, "h3").text
 print(parent_window_text)
