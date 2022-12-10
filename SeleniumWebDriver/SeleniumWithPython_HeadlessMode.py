@@ -7,6 +7,7 @@ from selenium.webdriver.support.select import Select
 #Headless Mode
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument("headless")
+chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument("--ignore-certificate-error")
 
 service_object = Service("C:\chromedriver.exe")
@@ -20,5 +21,7 @@ driver.get("https://rahulshettyacademy.com/AutomationPractice/")
 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
 #driver.get_screenshot_as_file("headlessScreenShot.png")
-
+#driver.get_screenshot_as_file("scroll_to_bottom.png")
+#driver.save_screenshot()
+driver.get_screenshot_as_file("C:\\Users\\moses\\PycharmProjects\\pythonProject\\ScreenShots\\screenshot1.png")
 print("execution_successful")
