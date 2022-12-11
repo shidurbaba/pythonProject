@@ -10,7 +10,7 @@ chrome_options.add_argument("headless")
 chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument("--ignore-certificate-error")
 
-service_object = Service("C:\chromedriver.exe")
+service_object = Service("C:\\Users\\moses\\PycharmProjects\\pythonProject\\drivers\\chromedriver.exe")
 
 driver = webdriver.Chrome(service=service_object, options=chrome_options)
 driver.maximize_window()
